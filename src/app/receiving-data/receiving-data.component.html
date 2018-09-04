@@ -1,0 +1,17 @@
+<div>
+  <input 
+  type="text" class="form-control" 
+  (input)="reverseDataBinding($event)" 
+  placeholder="Dynamic data: 'Reverse event data binding'" />
+  <p> {{ receivedData }} </p>
+</div>
+<div>
+  <input 
+  type="text" class="form-control" 
+  placeholder="Dynamic data: 'Two-way data binding'"
+  [(ngModel)]="receivedData"
+   />
+   <!-- import { FormsModule } from '@angular/forms' + add to imports to AppModule -->
+  <p> {{ receivedData }} </p>
+</div>
+<div>

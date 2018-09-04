@@ -1,0 +1,20 @@
+<div>
+  <input 
+  type="text" class="form-control" 
+  (input)="nameElement($event)" 
+  placeholder="Input name element and press 'Submit'"
+  [value]="namingString" 
+  />
+  <button 
+  type="button" 
+  class="btn btn-info" 
+  (click)="createElement()">
+  Submit
+  </button>
+</div>
+<app-loop-element 
+  *ngFor="let item of loopItems"
+  [passedItem]="item"
+  (getResponseFromChild)="removeElement($event)"
+  >
+</app-loop-element>

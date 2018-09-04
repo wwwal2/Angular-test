@@ -1,0 +1,11 @@
+<div>
+  <button 
+    type="button" 
+    [class]="buttonColor()" 
+    (click)="activateDirective()"
+    >Activate directive</button>
+  <p *ngIf="directiveOn; else defaultDirective"> Manual Directive activated</p>
+  <ng-template #defaultDirective>
+    <p>Default Directive is acting</p>
+  </ng-template>
+</div>
