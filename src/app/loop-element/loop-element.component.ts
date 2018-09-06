@@ -14,6 +14,10 @@ export class LoopElementComponent implements OnInit {
 
   @Input() passedItem: string;
 
-  
+  @Output() getResponseFromChild = new EventEmitter<string>(); 
+
+  passNameToDelete() {
+    this.getResponseFromChild.emit(this.passedItem)
+  }
 
 }

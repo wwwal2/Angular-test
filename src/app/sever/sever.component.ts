@@ -23,10 +23,13 @@ export class SeverComponent implements OnInit {
     this.namingString = '';
   }
 
-  loopItems = []
+  loopItems = [];
 
   removeElement (nameToRemove: string) {
-
+    let removeItem = this.loopItems.filter(item => {
+      return item !== nameToRemove
+    })
+    this.loopItems = removeItem;
   }
   
 }
